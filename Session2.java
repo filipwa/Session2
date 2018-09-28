@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
 import java.util.Base64;
@@ -20,6 +19,11 @@ public class Session2 {
 
 	}
 
+	// creates a Instant object of an XML time stamp
+	/**
+	 * @param instant
+	 * @return
+	 */
 	static public Instant parseDateTimestamp(String instant) {
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
@@ -54,15 +58,21 @@ public class Session2 {
 		return null;
 	}
 
+	// Generate a base64 representation of an image 
+	/**
+	 * @param path
+	 * @return
+	 */
 	static public String readPicture(String path) {
 		File file = new File(path);
 
-		String encodedfile = null;
+		String base64pic = null;
 		try {
+			@SuppressWarnings("resource")
 			FileInputStream fileInputStreamReader = new FileInputStream(file);
-			byte[] bytes = new byte[(int) file.length()];
-			fileInputStreamReader.read(bytes);
-			encodedfile = new String(Base64.getEncoder().encode(bytes), "UTF-8");
+			byte[] input = new byte[(int) file.length()];
+			fileInputStreamReader.read(input);
+			base64pic = new String(Base64.getEncoder().encode(input), "UTF-8");
 		} catch (FileNotFoundException e) {
 
 			e.printStackTrace();
@@ -71,7 +81,7 @@ public class Session2 {
 			e.printStackTrace();
 		}
 
-		return encodedfile;
+		return base64pic;
 
 	}
 
