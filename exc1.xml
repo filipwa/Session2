@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Family>
+
+	<FamilyMember>
+		<Name>
+			Dad
+		</Name>
+		<Info>
+			<Birthdate>
+				1960-04-02
+			</Birthdate>
+			<Height>
+				180
+			</Height>
+			<Weight>
+				80
+			</Weight>
+		</Info>
+
+	</FamilyMember>
+	<FamilyMember>
+		<Name id="j457vh">
+			Mom
+		</Name>
+		<Info>
+			<Birthdate>
+				1964-07-25
+			</Birthdate>
+			<Height>
+				170
+			</Height>
+			<Weight>
+				72
+			</Weight>
+		</Info>
+
+	</FamilyMember>
+	<FamilyMember>
+		<Name>
+			Son
+		</Name>
+		<Info>
+			<Birthdate>
+				1990-03-02
+			</Birthdate>
+			<Height>
+				185
+			</Height>
+			<Weight>
+				84
+			</Weight>
+		</Info>
+	</FamilyMember>
+
+	<Trips>
+
+		<Trip>
+			<Date>
+				2017-05-10
+			</Date>
+			<Location>
+				The Park
+			</Location>
+			<Transportation>
+				Bus
+			</Transportation>
+		</Trip>
+
+		<Trip>
+			<Date>
+				2018-07-10
+			</Date>
+			<Location>
+				Paris
+			</Location>
+			<Transportation>
+				Car
+			</Transportation>
+		</Trip>
+	</Trips>
+</Family>
+
